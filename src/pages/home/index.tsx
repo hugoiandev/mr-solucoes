@@ -10,6 +10,7 @@ import LupaIcon from "../../assets/icons/lupa.svg";
 import MaosIcon from "../../assets/icons/maos.svg";
 import PagamentoIcon from "../../assets/icons/pagamentos.svg";
 import PhoneIcon from "../../assets/icons/phone.svg";
+import Button from "../../components/button";
 
 const Home = (): JSX.Element => {
   return (
@@ -149,7 +150,71 @@ const Home = (): JSX.Element => {
           </div>
         </Container>
       </section>
-      <section className="requirementes"></section>
+      <section className={styles.requirements}>
+        <Container fluid="md">
+          <div className="d-flex justify-content-end">
+            <div>
+              <h2 className={styles.requirementsTitle}>
+                Como obter
+                <span className={styles.requirementsTitleSpan}>
+                  {" "}
+                  meu saldo?
+                </span>
+              </h2>
+              <div className="mt-5 d-flex flex-column align-items-center">
+                <div>
+                  <Row className={styles.requirementRow}>
+                    <Col className={styles.requirementItem}>
+                      <span className={styles.requirementNumber}>1</span>
+                      <p className={styles.requirementParagraph}>
+                        Ter mais de 18 anos ou ser emancipado;
+                      </p>
+                    </Col>
+                    <Col className={styles.requirementItem}>
+                      <span className={styles.requirementNumber}>2</span>
+                      <p className={styles.requirementParagraph}>
+                        Ter CPF em situação regular na receita;
+                      </p>
+                    </Col>
+                  </Row>
+                  <Row className={styles.requirementRow}>
+                    <Col className={styles.requirementItem}>
+                      <span className={styles.requirementNumber}>3</span>
+                      <p className={styles.requirementParagraph}>
+                        Ter conta-corrente ou poupança;
+                      </p>
+                    </Col>
+                    <Col className={styles.requirementItem}>
+                      <span className={styles.requirementNumber}>4</span>
+                      <p className={styles.requirementParagraph}>
+                        Ser optante do saque aniversário;
+                      </p>
+                    </Col>
+                  </Row>
+                  <Row className={styles.requirementRow}>
+                    <Col className={styles.requirementItem}>
+                      <span className={styles.requirementNumber}>5</span>
+                      <p className={styles.requirementParagraph}>
+                        Autorizar a consulta do seu saldo FGTS;
+                      </p>
+                    </Col>
+                    <Col className={styles.requirementItem}>
+                      <span className={styles.requirementNumber}>6</span>
+                      <p className={styles.requirementParagraph}>
+                        Assinatura digital e aprovação do pagamento em sua conta
+                        bancária.
+                      </p>
+                    </Col>
+                  </Row>
+                </div>
+                <div className="mt-4">
+                  <Button text="QUERO ANTECIPAR" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </Container>
+      </section>
     </div>
   );
 };
