@@ -10,6 +10,12 @@ import LupaIcon from "../../assets/icons/lupa.svg";
 import MaosIcon from "../../assets/icons/maos.svg";
 import PagamentoIcon from "../../assets/icons/pagamentos.svg";
 import PhoneIcon from "../../assets/icons/phone.svg";
+import HouseIcon from "../../assets/icons/house.svg";
+import CardIcon from "../../assets/icons/card.svg";
+import SchoolIcon from "../../assets/icons/school.svg";
+import HeartIcon from "../../assets/icons/heart.svg";
+import ExclamationIcon from "../../assets/icons/exclamation.svg";
+import bgMan from "../../assets/imgs/bg-man.png";
 import Button from "../../components/button";
 
 const Home = (): JSX.Element => {
@@ -78,7 +84,7 @@ const Home = (): JSX.Element => {
       <section className={styles.advantages}>
         <Container fluid="md">
           <div className="d-flex justify-content-center">
-            <div className="d-flex flex-column align-items-center">
+            <div className="d-flex flex-column align-items-center text-center">
               <h2 className={styles.advantagesTitle}>
                 Vantagens
                 <span className={styles.advantagesTitleSpan}> exclusivas</span>
@@ -213,6 +219,81 @@ const Home = (): JSX.Element => {
               </div>
             </div>
           </div>
+        </Container>
+      </section>
+      <section className={styles.beneficts}>
+        <Container fluid="md">
+          <Row className="align-items-center justify-content-center">
+            <Col md={6} sm={12}>
+              <div className="d-flex justify-content-center">
+                <div className={styles.bgManBox}>
+                  <Image src={bgMan} className="w-100" />
+                </div>
+              </div>
+            </Col>
+            <Col md={6} sm={12}>
+              <Stack>
+                <div className="mb-4">
+                  <h2 className={styles.benefictsTitle}>
+                    O
+                    <span className={styles.benefictsTitleSpan}>
+                      {" "}
+                      FGTS é um dinheiro que já é seu,{" "}
+                    </span>
+                    com ele você pode fazer o que quiser!
+                  </h2>
+                </div>
+                <div className="d-flex align-items-center mb-4">
+                  <div className={styles.benefictsIconBox}>
+                    <Image src={HouseIcon} className="w-100" />
+                  </div>
+                  <span className={styles.benefictsList}>
+                    <span className="fw-bold">Reforme sua casa </span>ou renove
+                    a decoração
+                  </span>
+                </div>
+                <div className="d-flex align-items-center mb-4">
+                  <div className={styles.benefictsIconBox}>
+                    <Image src={CardIcon} className="w-100" />
+                  </div>
+                  <span className={styles.benefictsList}>
+                    <span className="fw-bold">Pague suas dívidas </span>e fique
+                    tranquilo
+                  </span>
+                </div>
+                <div className="d-flex align-items-center mb-4">
+                  <div className={styles.benefictsIconBox}>
+                    <Image src={SchoolIcon} className="w-100" />
+                  </div>
+                  <span className={styles.benefictsList}>
+                    <span className="fw-bold">Invista nos estudos</span>de
+                    alguém da sua família
+                  </span>
+                </div>
+                <div className="d-flex align-items-center mb-4">
+                  <div className={styles.benefictsIconBox}>
+                    <Image src={HeartIcon} className="w-100" />
+                  </div>
+                  <span className={styles.benefictsList}>
+                    <span className="fw-bold">Valorize sua saúde </span>e de
+                    quem você ama
+                  </span>
+                </div>
+                <div className="d-flex align-items-center mb-4">
+                  <div className={styles.benefictsIconBox}>
+                    <Image src={ExclamationIcon} className="w-100" />
+                  </div>
+                  <span className={styles.benefictsList}>
+                    <span className="fw-bold">Não seja pego de surpresa </span>
+                    por emergências familiares
+                  </span>
+                </div>
+                <div className={`mt-4 ${styles.benefictsButtonBox}`}>
+                  <Button text="QUERO ANTECIPAR" />
+                </div>
+              </Stack>
+            </Col>
+          </Row>
         </Container>
       </section>
     </div>

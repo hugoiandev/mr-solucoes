@@ -212,3 +212,47 @@
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
 }
+
+.beneficts {
+  margin-top: 50px;
+  background-color: #F9F9F9;
+  padding: 60px 0;
+}
+
+.bgManBox {
+  max-width: 400px;
+}
+
+.benefictsTitle {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.benefictsTitleSpan {
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .benefictsTitle {
+    margin-top: 60px;
+  }
+}
+
+.benefictsIconBox {
+  width: 40px;
+  margin-right: 15px;
+  background-color: #F49D2C;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.benefictsList {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .benefictsButtonBox {
+    display: flex;
+    justify-content: center;
+  }
+}
