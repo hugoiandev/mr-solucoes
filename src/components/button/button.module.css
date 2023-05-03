@@ -1,0 +1,10 @@
+
+.button {
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  border: none;
+  letter-spacing: 3px;
+  padding: 12px 25px;
+  border-radius: 30px;
+}

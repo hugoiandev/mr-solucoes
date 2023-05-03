@@ -1,0 +1,172 @@
+.intro {
+  width: 100%;
+  height: 600px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url('../../assets/imgs/img-woman.jpg');
+}
+
+.titleBox {
+  margin-top: 150px;
+}
+
+.title {
+  font-size: 3.6rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  color: white;
+  max-width: 550px;
+}
+
+.subtitle {
+  display: block;
+  font-size: 1.1rem;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  max-width: 500px;
+}
+
+.simulation {
+  background-color: #F5F5F5;
+  padding: 30px 50px;
+  border: none;
+  border-radius: 20px;
+  align-self: flex-start;
+  position: absolute;
+  left: 0;
+  bottom: -290px;
+  box-shadow: 0px 7px 20px -6px rgba(0,0,0,0.61);
+}
+
+.simulationTitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.simulationSubtitle {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 1.5rem;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.simulationInputBox {
+  display: flex;
+}
+
+.simulationInput {
+  width: 100%;
+  padding: 10px 0 10px 20px;
+  border: 1px solid black;
+  border-right: none;
+  border-radius: 10px 0 0 10px;
+}
+
+.simulationInput::placeholder {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+}
+
+.simulationInput:focus {
+  outline: 0;
+}
+
+.simulationInputButton {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  background-color: #F49D2C;
+  color: white;
+  font-weight: bold;
+  white-space: nowrap;
+  padding: 5px 40px;
+  border: none;
+  border-radius: 0 10px 10px 0;
+}
+
+.illustration {
+  margin-top: 400px;
+  position: relative;
+  gap: 10px;
+}
+
+.illustrationBox {
+  border: 1px solid black;
+  margin: 0 !important;
+  padding: 10px 30px;
+  border-radius: 15px;
+}
+
+.illustrationText {
+  margin-right: 40px;
+}
+
+.illustrationSpanTitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.4rem;
+  font-weight: bold;
+  display: block;
+}
+
+.illustrationSpanSubtitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+  display: block;
+}
+
+.iconBox {
+  max-width: 200px;
+}
+
+.advantages {
+  margin-top: 450px;
+  padding: 60px 0;
+  background-color: #F9F9F9;
+}
+
+@media (max-width: 768px) {
+  .advantages {
+    margin-top: 650px;
+  }
+}
+
+@media (max-width: 410px) {
+  .advantages {
+    margin-top: 770px;
+  }
+}
+
+.advantagesTitle {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.advantagesTitleSpan {
+  font-weight: bold;
+}
+
+.advantagesText {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+}
+
+.advantageIconBox {
+  background-color: white;
+}
+
+.advantageIconSpan {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+.advantageIconParagraph {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  margin-top: 3px;
+  text-align: center;
+}

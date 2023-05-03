@@ -1,0 +1,38 @@
+
+.header {
+  width: 100%;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 70px;
+  flex-wrap: wrap;
+}
+
+.logoBox {
+  max-width: 250px;
+  min-width: 150px;
+}
+
+.navLogo {
+  width: 100%;
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+}
+
+.navLinks li {
+  margin-left: 40px;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.navLinks li:last-child {
+  margin-left: 200px;
+}
