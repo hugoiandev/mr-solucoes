@@ -1,6 +1,6 @@
 import { Image } from "react-bootstrap";
 import styles from "./footer.module.css";
-import MrLogo from "../../assets/logos/mr-logo.svg";
+import MrLogo from "../../assets/logos/mr-logo-white.svg";
 
 const Footer = () => {
   const date = new Date();
@@ -11,7 +11,7 @@ const Footer = () => {
         <Image src={MrLogo} className={styles.footerLogo} />
       </div>
       <div>
-        <span>
+        <span className={styles.footerCopy}>
           {`© ${date.getFullYear()}  - Todos os direitos reservados | MR Soluções Financeiras`}
         </span>
       </div>

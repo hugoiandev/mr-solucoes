@@ -1,6 +1,6 @@
 import { Image } from "react-bootstrap";
 import styles from "./header.module.css";
-import Logo from "../../assets/logos/mr-logo.svg";
+import Logo from "../../assets/logos/mr-logo-black.svg";
 import Button from "../button";
 
 const Header = (): JSX.Element => {

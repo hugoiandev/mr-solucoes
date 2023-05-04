@@ -3,6 +3,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 30px 70px;
+  background-color: #237BAF;
 }
 
 .logoBox {
@@ -11,4 +13,19 @@
 
 .footerLogo {
   width: 100%;
+}
+
+.footerCopy {
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+}
+
+@media (max-width: 850px) {
+  .footer {
+    flex-direction: column;
+  }
+
+  .logoBox {
+    margin-bottom: 20px;
+  }
 }

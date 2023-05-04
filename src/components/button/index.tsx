@@ -1,15 +1,17 @@
 import styles from "./button.module.css";
+import { Image } from "react-bootstrap";
+import WhatsAppIcon from "../../assets/icons/whatsaap.svg";
 
 interface ButtonProps {
   text: string;
-  icon?: JSX.Element;
+  icon?: boolean;
   color?: string;
   bgColor?: string;
 }
 
 const Button = ({
   text,
-  icon,
+  icon = true,
   color = "white",
   bgColor = "#F49D2C",
 }: ButtonProps): JSX.Element => {
@@ -18,8 +20,12 @@ const Button = ({
       className={styles.button}
       style={{ color, backgroundColor: bgColor }}
     >
-      {icon && icon}
-      {text}
+      {icon && (
+        <div className="me-2">
+          <Image width={30} src={WhatsAppIcon} />
+        </div>
+      )}
+      <p className={styles.buttonText}>{text}</p>
     </button>
   );
 };

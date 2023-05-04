@@ -256,3 +256,142 @@
     justify-content: center;
   }
 }
+
+.faq {
+  background-color: #1B76AC;
+  padding: 60px 0;
+}
+
+.faqTitle {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  color: white;
+}
+
+.faqSubtitle {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  color: white;
+  font-weight: bold;
+}
+
+.accordionHeader button {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+}
+
+.accordionText {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.testimonials {
+  padding: 60px 0;
+  background-color: #F9F9F9;
+}
+
+.testimonialsTitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.2rem;
+}
+
+.testimonialsTitleSpan {
+  font-weight: bold;
+}
+
+.carouselItem {
+  background-color: white;
+  padding: 20px 30px;
+  border-radius: 20px;
+}
+
+.carouselParagraph {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+  font-style: italic;
+}
+
+.carouselName {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #237BAF;
+}
+
+.carouselDate {
+  font-family: 'Montserrat', sans-serif;
+  font-style: italic;
+  font-size: 1.2rem;
+  color: #237BAF;
+}
+
+.carouselCustomClass {
+  box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.55);
+  border-radius: 20px;
+}
+
+.contact {
+  padding: 60px 0;
+  background-color: #F9F9F9;
+}
+
+.contactTitle {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+}
+
+.contactSpan {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.socialMediaBox {
+  padding: 5px;
+  background-color: #8a8a8a;
+  border-radius: 5px;
+}
+
+.separatorBox {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+}
+
+.separator {
+  height: 1px;
+  background-color: #8a8a8a;
+  width: 70%;
+}
+
+.termsText {
+  text-align: justify;
+  font-family: 'Montserrat', sans-serif;
+  font-size: .7rem;
+  color: #818181;
+}
+
+.termsAdvertimentText {
+  text-align: justify;
+  font-family: 'Montserrat', sans-serif;
+  font-size: .7rem;
+  font-weight: 500;
+  color: #2c2c2c;
+}
+
+.lastRowimgManBox {
+  max-width: 350px;
+}
+
+.lastRowTitle {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.lastRowParagraph {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
