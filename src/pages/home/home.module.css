@@ -26,6 +26,20 @@
   max-width: 500px;
 }
 
+@media (max-width: 768px) {
+  .intro {
+    height: 450px;
+  }
+
+  .titleBox {
+    margin-top: 50px;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+}
+
 .simulation {
   background-color: #F5F5F5;
   padding: 30px 50px;
@@ -36,6 +50,13 @@
   left: 0;
   bottom: -290px;
   box-shadow: 0px 7px 20px -6px rgba(0,0,0,0.61);
+}
+
+@media (max-width: 768px) {
+  .simulation {
+    left: 0;
+    right: 0;
+  }
 }
 
 .simulationTitle {
@@ -88,10 +109,47 @@
   border-radius: 0 10px 10px 0;
 }
 
+@media (max-width: 500px) {
+  .simulation {
+    padding: 20px 20px;
+  }
+
+  .simulationTitle {
+    font-size: 1.3rem;
+  }
+
+  .simulationSubtitle {
+    font-size: 1.2rem;
+  }
+
+  .simulationInputBox {
+    display: block;
+  }
+
+  .simulationInput {
+    border: 1px solid black;
+    border-radius: 10px 10px 10px 10px;
+  }
+
+  .simulationInputButton {
+    width: 100%;
+    border-radius: 10px 10px 10px 10px;
+    margin-top: 15px;
+  }
+}
+
 .illustration {
   margin-top: 400px;
   position: relative;
   gap: 10px;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+@media (max-width: 768px) {
+  .illustration {
+    margin-top: 350px;
+  }
 }
 
 .illustrationBox {
@@ -99,6 +157,11 @@
   margin: 0 !important;
   padding: 10px 30px;
   border-radius: 15px;
+}
+
+.illustrationItem {
+  display: flex;
+  align-items: center;
 }
 
 .illustrationText {
@@ -122,6 +185,33 @@
   max-width: 200px;
 }
 
+@media (max-width: 500px) {
+  .illustrationBox {
+    padding: 10px 15px;
+  }
+
+  .illustrationItem {
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+
+  .iconBox {
+    max-width: 100px;
+  }
+
+  .illustrationText {
+    margin: 0;
+  }
+
+  .illustrationSpanTitle {
+    text-align: center;
+  }
+
+  .illustrationSpanSubtitle {
+    text-align: center;
+  }
+}
+
 .advantages {
   margin-top: 450px;
   padding: 60px 0;
@@ -130,13 +220,19 @@
 
 @media (max-width: 768px) {
   .advantages {
-    margin-top: 650px;
+    margin-top: 600px;
   }
 }
 
 @media (max-width: 410px) {
   .advantages {
-    margin-top: 770px;
+    margin-top: 550px;
+  }
+}
+
+@media (max-width: 373px) {
+  .advantages {
+    margin-top: 700px;
   }
 }
 
@@ -301,9 +397,10 @@
 }
 
 .carouselItem {
-  background-color: white;
+  background-color: #F9F9F9;
   padding: 20px 30px;
   border-radius: 20px;
+  box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.55);
 }
 
 .carouselParagraph {
@@ -319,6 +416,20 @@
   color: #237BAF;
 }
 
+.carouselRate {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+@media (max-width: 370px) {
+  .carouselRate {
+    display: block !important;
+    margin-top: 15px;
+  }
+}
+
 .carouselDate {
   font-family: 'Montserrat', sans-serif;
   font-style: italic;
@@ -327,7 +438,7 @@
 }
 
 .carouselCustomClass {
-  box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.55);
+  background-color: #F9F9F9;
   border-radius: 20px;
 }
 
@@ -368,6 +479,30 @@
   font-family: 'Montserrat', sans-serif;
   font-size: .7rem;
   color: #818181;
+}
+
+.lastAd {
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .lastAd {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .lastAdImg {
+    display: flex;
+    justify-content: center;
+  }
+
+  .lastAdText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .termsAdvertimentText {

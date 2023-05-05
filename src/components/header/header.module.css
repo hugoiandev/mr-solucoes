@@ -1,19 +1,35 @@
 
 .header {
   width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 70px;
+  flex-wrap: nowrap;
+  position: relative;
 }
 
-.nav {
+/* .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 30px 70px;
   flex-wrap: wrap;
-}
+} */
 
 .logoBox {
   max-width: 250px;
   min-width: 150px;
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 30px 30px;
+  }
+
+  .logoBox {
+    max-width: 200px;
+  }
 }
 
 .navLogo {
@@ -35,4 +51,47 @@
 
 .navLinks li:last-child {
   margin-left: 200px;
+}
+
+.header .fixedHeader {
+  position: fixed;
+  top: 0;
+}
+
+.burger {
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+.menuMobile {
+  background-color: white;
+  border-top: 1px solid black;
+  padding: 20px 0;
+}
+
+.menuMobileOpened {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 30;
+}
+
+.menuMobileClosed {
+  display: none;
+}
+
+.navMobileLinks {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0;
+}
+
+.navMobileLinks li {
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  letter-spacing: 1px;
 }

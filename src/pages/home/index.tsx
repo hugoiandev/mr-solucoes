@@ -29,8 +29,11 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination, Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { useMediaQuery } from "react-responsive";
 
 const Home = (): JSX.Element => {
+  const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
+
   return (
     <>
       <Header />
@@ -65,7 +68,7 @@ const Home = (): JSX.Element => {
           </Stack>
           <Row className={`${styles.illustration} flex-wrap flex-md-nowrap`}>
             <Col md={6} sm={12} className={`${styles.illustrationBox}`}>
-              <div className="d-flex align-items-center">
+              <div className={styles.illustrationItem}>
                 <div className={styles.illustrationText}>
                   <span className={styles.illustrationSpanTitle}>24 Horas</span>
                   <span className={styles.illustrationSpanSubtitle}>
@@ -78,7 +81,7 @@ const Home = (): JSX.Element => {
               </div>
             </Col>
             <Col md={6} sm={12} className={`${styles.illustrationBox}`}>
-              <div className="d-flex align-items-center">
+              <div className={styles.illustrationItem}>
                 <div className={styles.illustrationText}>
                   <span className={styles.illustrationSpanTitle}>100%</span>
                   <span className={styles.illustrationSpanSubtitle}>
@@ -107,7 +110,7 @@ const Home = (): JSX.Element => {
             </div>
           </div>
           <div className={styles.advantageContent}>
-            <Row className="gap-3 flex-wrap flex-md-nowrap mb-3">
+            <Row className="gap-3 flex-md-nowrap mb-3 ms-0 me-0">
               <Col md={4} className={styles.advantageIconBox}>
                 <div className="d-flex flex-column align-items-center p-3">
                   <Image src={LupaIcon} width={70} />
@@ -136,7 +139,7 @@ const Home = (): JSX.Element => {
                 </div>
               </Col>
             </Row>
-            <Row className="gap-3 flex-wrap flex-md-nowrap">
+            <Row className="gap-3 flex-md-nowrap ms-0 me-0">
               <Col md={4} className={styles.advantageIconBox}>
                 <div className="d-flex flex-column align-items-center p-3">
                   <Image src={PhoneIcon} width={70} />
@@ -432,9 +435,12 @@ const Home = (): JSX.Element => {
           <Swiper
             direction="horizontal"
             modules={[Pagination, Autoplay]}
-            pagination={{ clickable: true }}
             autoplay={true}
             className={styles.carouselCustomClass}
+            pagination={{ enabled: true, clickable: true }}
+            slidesPerView={isMobile ? 1 : 2}
+            spaceBetween={80}
+            style={{ padding: "40px 20px" }}
           >
             <SwiperSlide>
               <div className={styles.carouselItem}>
@@ -447,7 +453,7 @@ const Home = (): JSX.Element => {
                     excelente! Recomendo muito.”
                   </p>
                   <span className={styles.carouselName}>Bruna Letícia</span>
-                  <div className="d-flex justify-content-between align-items-center mt-3">
+                  <div className={styles.carouselRate}>
                     <span className={styles.carouselDate}>02/2022</span>
                     <span>
                       <Star />
@@ -467,7 +473,7 @@ const Home = (): JSX.Element => {
                     excelente! Recomendo muito.”
                   </p>
                   <span className={styles.carouselName}>Bruna Letícia</span>
-                  <div className="d-flex justify-content-between align-items-center mt-3">
+                  <div className={styles.carouselRate}>
                     <span className={styles.carouselDate}>02/2022</span>
                     <span>
                       <Star />
@@ -487,7 +493,7 @@ const Home = (): JSX.Element => {
                     excelente! Recomendo muito.”
                   </p>
                   <span className={styles.carouselName}>Bruna Letícia</span>
-                  <div className="d-flex justify-content-between align-items-center mt-3">
+                  <div className={styles.carouselRate}>
                     <span className={styles.carouselDate}>02/2022</span>
                     <span>
                       <Star />
@@ -507,11 +513,9 @@ const Home = (): JSX.Element => {
                     excelente! Recomendo muito.”
                   </p>
                   <span className={styles.carouselName}>Bruna Letícia</span>
-                  <div className="d-flex justify-content-between align-items-center mt-3">
+                  <div className={styles.carouselRate}>
                     <span className={styles.carouselDate}>02/2022</span>
-                    <span>
-                      <Star />
-                    </span>
+                    <Star />
                   </div>
                 </div>
               </div>
@@ -524,7 +528,7 @@ const Home = (): JSX.Element => {
           <div>
             <Row>
               <Col md={6}>
-                <div>
+                <div className={styles.contactInfo}>
                   <div className="mb-3">
                     <span className={styles.contactTitle}>
                       Quer conversar com o time?
@@ -575,16 +579,16 @@ const Home = (): JSX.Element => {
           <div>
             <div>
               <p className={styles.termsText}>
-                Crédito sujeito a saldo FGTS disponível. A GH Promotora é a
-                marca de uso da empresa inscrita no CNPJ 48.716.991/0001-30.
-                Atuamos como correspondente bancário, atividade regulada pelo
-                Banco Central do Brasil, nos termos da Resolução nº 3.954, de 24
-                de fevereiro de 2011. Toda avaliação de crédito será realizada
-                conforme a política de crédito da Instituição Financeira
-                escolhida pelo usuário. Antes da contratação de qualquer serviço
-                através de nossos parceiros, você receberá todas as condições e
-                informações relativas ao produto a ser contratado, de forma
-                completa e transparente.
+                Crédito sujeito a saldo FGTS disponível. A MR SOLUÇÕES
+                FINANCEIRAS é a marca de uso da empresa inscrita no CNPJ
+                48.716.991/0001-30. Atuamos como correspondente bancário,
+                atividade regulada pelo Banco Central do Brasil, nos termos da
+                Resolução nº 3.954, de 24 de fevereiro de 2011. Toda avaliação
+                de crédito será realizada conforme a política de crédito da
+                Instituição Financeira escolhida pelo usuário. Antes da
+                contratação de qualquer serviço através de nossos parceiros,
+                você receberá todas as condições e informações relativas ao
+                produto a ser contratado, de forma completa e transparente.
                 <br />
                 <br />A Antecipação do Saque Aniversário do FGTS trata-se de um
                 empréstimo para antecipar o valor do saque anual utilizando o
@@ -606,14 +610,14 @@ const Home = (): JSX.Element => {
             </div>
           </div>
           <div>
-            <Row className="align-items-center">
-              <Col>
+            <Row className={styles.lastAd}>
+              <Col className={styles.lastAdImg}>
                 <div className={styles.lastRowimgManBox}>
                   <Image className="w-100" src={bgMan2} />
                 </div>
               </Col>
               <Col>
-                <div>
+                <div className={styles.lastAdText}>
                   <span className={styles.lastRowTitle}>
                     Ops... então você é do tipo desconfiado?
                   </span>
