@@ -3,21 +3,37 @@ import styles from "./header.module.css";
 import Logo from "../../assets/logos/mr-logo-black.svg";
 import Button from "../button";
 import { useMediaQuery } from "react-responsive";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import CloseIcon from "../../assets/icons/close.svg";
 import OpenIcon from "../../assets/icons/burger.svg";
 
 const Header = (): JSX.Element => {
   const [open, setOpen] = useState<boolean>(false);
+  const [fixed, setFixed] = useState<boolean>(false);
+
+  const headerElement = useRef<HTMLElement>(null);
 
   const isMobile = useMediaQuery({ query: "(max-width: 1319px)" });
+
+  window.addEventListener("scroll", () => {
+    if (headerElement.current?.clientHeight) {
+      if (window.scrollY > headerElement.current?.clientHeight) {
+        setFixed(true);
+      } else {
+        setFixed(false);
+      }
+    }
+  });
 
   const onOpen = () => {
     setOpen((state) => !state);
   };
 
   return (
-    <header className={`${styles.header}`}>
+    <header
+      ref={headerElement}
+      className={`${styles.header} ${fixed ? styles.fixedHeader : ""}`}
+    >
       <div className={styles.logoBox}>
         <Image src={Logo} className={styles.navLogo} />
       </div>
