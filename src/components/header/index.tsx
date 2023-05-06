@@ -31,11 +31,20 @@ const Header = (): JSX.Element => {
         <nav className={styles.nav}>
           <div>
             <ul className={styles.navLinks}>
-              <li>VANTAGENS</li>
-              <li>COMO OBTER</li>
-              <li>FAQ</li>
               <li>
-                <Button text="ANTECIPE AGORA" />
+                <a href="#advantages">VANTAGENS</a>
+              </li>
+              <li>
+                <a href="#requirements">COMO OBTER</a>
+              </li>
+              <li>
+                <a href="#faq">FAQ</a>
+              </li>
+              <li>
+                <Button
+                  href="https://api.whatsapp.com/send?phone=5519982766681&text=Ol%C3%A1%20gostaria%20de%20fazer%20uma%20simula%C3%A7%C3%A3o%20do%20Saque%20FGTS!"
+                  text="ANTECIPE AGORA"
+                />
               </li>
             </ul>
           </div>
@@ -49,11 +58,22 @@ const Header = (): JSX.Element => {
         >
           <div>
             <ul className={styles.navMobileLinks}>
-              <li>VANTAGENS</li>
-              <li>COMO OBTER</li>
-              <li>FAQ</li>
               <li>
-                <Button size="small" textSize={0.9} text="ANTECIPE AGORA" />
+                <a href="#advantages">VANTAGENS</a>
+              </li>
+              <li>
+                <a href="#requirements">COMO OBTER</a>
+              </li>
+              <li>
+                <a href="#faq">FAQ</a>
+              </li>
+              <li>
+                <Button
+                  href="https://api.whatsapp.com/send?phone=5519982766681&text=Ol%C3%A1%20gostaria%20de%20fazer%20uma%20simula%C3%A7%C3%A3o%20do%20Saque%20FGTS!"
+                  size="small"
+                  textSize={0.9}
+                  text="ANTECIPE AGORA"
+                />
               </li>
             </ul>
           </div>

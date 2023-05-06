@@ -30,14 +30,17 @@ import "swiper/css/pagination";
 import { Pagination, Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useMediaQuery } from "react-responsive";
+import { useState } from "react";
 
 const Home = (): JSX.Element => {
+  const [simulationInput, setSimulationInput] = useState<string>("2000");
+
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
 
   return (
     <>
       <Header />
-      <section className={styles.intro}>
+      <section id="intro" className={styles.intro}>
         <Container fluid="md">
           <Stack className="position-relative">
             <div className={styles.titleBox}>
@@ -56,13 +59,27 @@ const Home = (): JSX.Element => {
               </span>
               <div className={styles.simulationInputBox}>
                 <input
-                  type="text"
+                  type="number"
                   placeholder="Ex: 2.000,00"
                   className={styles.simulationInput}
+                  value={simulationInput}
+                  onChange={(event) => setSimulationInput(event.target.value)}
+                  required
                 />
-                <button className={styles.simulationInputButton}>
-                  SIMULE JÁ
-                </button>
+                <a
+                  href={`https://api.whatsapp.com/send?phone=5519982766681&text=Ol%C3%A1%20gostaria%20de%20fazer%20uma%20simula%C3%A7%C3%A3o%20do%20Saque%20FGTS! Valor: ${Number(
+                    simulationInput
+                  ).toLocaleString("pt-br", {
+                    style: "currency",
+                    currency: "BRL",
+                  })}`}
+                  target="_BLANK"
+                  rel="noreferrer"
+                >
+                  <button className={styles.simulationInputButton}>
+                    SIMULE JÁ
+                  </button>
+                </a>
               </div>
             </div>
           </Stack>
@@ -96,7 +113,7 @@ const Home = (): JSX.Element => {
           </Row>
         </Container>
       </section>
-      <section className={styles.advantages}>
+      <section id="advantages" className={styles.advantages}>
         <Container fluid="md">
           <div className="d-flex justify-content-center">
             <div className="d-flex flex-column align-items-center text-center">
@@ -171,7 +188,7 @@ const Home = (): JSX.Element => {
           </div>
         </Container>
       </section>
-      <section className={styles.requirements}>
+      <section id="requirements" className={styles.requirements}>
         <Container fluid="md">
           <div className={styles.requirementsBox}>
             <div>
@@ -229,7 +246,10 @@ const Home = (): JSX.Element => {
                   </Row>
                 </div>
                 <div className="mt-4">
-                  <Button text="QUERO ANTECIPAR" />
+                  <Button
+                    href="https://api.whatsapp.com/send?phone=5519982766681&text=Ol%C3%A1%20gostaria%20de%20fazer%20uma%20simula%C3%A7%C3%A3o%20do%20Saque%20FGTS!"
+                    text="QUERO ANTECIPAR"
+                  />
                 </div>
               </div>
             </div>
@@ -304,14 +324,17 @@ const Home = (): JSX.Element => {
                   </span>
                 </div>
                 <div className={`mt-4 ${styles.benefictsButtonBox}`}>
-                  <Button text="QUERO ANTECIPAR" />
+                  <Button
+                    href="https://api.whatsapp.com/send?phone=5519982766681&text=Ol%C3%A1%20gostaria%20de%20fazer%20uma%20simula%C3%A7%C3%A3o%20do%20Saque%20FGTS!"
+                    text="QUERO ANTECIPAR"
+                  />
                 </div>
               </Stack>
             </Col>
           </Row>
         </Container>
       </section>
-      <section className={styles.faq}>
+      <section id="faq" className={styles.faq}>
         <Container fluid="md">
           <div className="d-flex justify-content-center">
             <div>
@@ -418,7 +441,10 @@ const Home = (): JSX.Element => {
             </Row>
           </div>
           <div className="d-flex justify-content-center mt-5">
-            <Button text="QUERO ANTECIPAR" />
+            <Button
+              href="https://api.whatsapp.com/send?phone=5519982766681&text=Ol%C3%A1%20gostaria%20de%20fazer%20uma%20simula%C3%A7%C3%A3o%20do%20Saque%20FGTS!"
+              text="QUERO ANTECIPAR"
+            />
           </div>
         </Container>
       </section>
@@ -537,14 +563,17 @@ const Home = (): JSX.Element => {
                   <div className="d-flex align-items-center mb-3">
                     <Image width={30} src={CallIcon} className="me-3" />
                     <span className={styles.contactSpan}>
-                      Ligue: (19) 98607-3582
+                      Ligue: <a href="tel: (19) 98276-6681">(19) 98607-3582</a>
                     </span>
                   </div>
                   <div className="d-flex align-items-center mb-3">
                     <Image width={30} src={MailIcon} className="me-3" />
-                    <span className={styles.contactSpan}>
-                      atendimento@libereseufgts.com.br
-                    </span>
+                    <a
+                      href="mailto: suporte@informacaodevalor.com.br"
+                      className={styles.contactSpan}
+                    >
+                      suporte@informacaodevalor.com.br
+                    </a>
                   </div>
                   <div className="d-flex align-items-center mb-3">
                     <Image width={30} src={ScheduleIcon} className="me-3" />
@@ -562,12 +591,24 @@ const Home = (): JSX.Element => {
                     </span>
                   </div>
                   <div className="d-flex gap-3">
-                    <div className={styles.socialMediaIconBox}>
-                      <Image width={25} src={FacebookIcon} />
-                    </div>
-                    <div className={styles.socialMediaIconBox}>
-                      <Image width={25} src={InstagramIcon} />
-                    </div>
+                    <a
+                      href="https://www.facebook.com/mrsolucoesfinanceirass"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <div className={styles.socialMediaIconBox}>
+                        <Image width={25} src={FacebookIcon} />
+                      </div>
+                    </a>
+                    <a
+                      href="https://www.instagram.com/mr_solucoes_financeiras"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <div className={styles.socialMediaIconBox}>
+                        <Image width={25} src={InstagramIcon} />
+                      </div>
+                    </a>
                   </div>
                 </div>
               </Col>
@@ -581,7 +622,7 @@ const Home = (): JSX.Element => {
               <p className={styles.termsText}>
                 Crédito sujeito a saldo FGTS disponível. A MR SOLUÇÕES
                 FINANCEIRAS é a marca de uso da empresa inscrita no CNPJ
-                48.716.991/0001-30. Atuamos como correspondente bancário,
+                44.916.220/0001-35. Atuamos como correspondente bancário,
                 atividade regulada pelo Banco Central do Brasil, nos termos da
                 Resolução nº 3.954, de 24 de fevereiro de 2011. Toda avaliação
                 de crédito será realizada conforme a política de crédito da
@@ -626,7 +667,10 @@ const Home = (): JSX.Element => {
                     só para vender.
                   </p>
                   <div className="mt-4">
-                    <Button text="QUERO ANTECIPAR" />
+                    <Button
+                      href="https://api.whatsapp.com/send?phone=5519982766681&text=Ol%C3%A1%20gostaria%20de%20fazer%20uma%20simula%C3%A7%C3%A3o%20do%20Saque%20FGTS!"
+                      text="QUERO ANTECIPAR"
+                    />
                   </div>
                 </div>
               </Col>

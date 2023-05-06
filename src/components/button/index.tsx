@@ -10,6 +10,7 @@ interface ButtonProps {
   size?: "small" | "medium" | "large";
   iconSize?: number;
   textSize?: number;
+  href?: string;
 }
 
 const Button = ({
@@ -20,6 +21,7 @@ const Button = ({
   size = "large",
   iconSize = 30,
   textSize = 1,
+  href,
 }: ButtonProps): JSX.Element => {
   const checkButtonSize = (size: "small" | "medium" | "large") => {
     let selectedSize: string;
@@ -39,19 +41,21 @@ const Button = ({
   };
 
   return (
-    <button
-      className={checkButtonSize(size)}
-      style={{ color, backgroundColor: bgColor }}
-    >
-      {icon && (
-        <div className="me-2">
-          <Image width={iconSize} src={WhatsAppIcon} />
-        </div>
-      )}
-      <p style={{ fontSize: `${textSize}rem` }} className={styles.buttonText}>
-        {text}
-      </p>
-    </button>
+    <a href={href} target="_BLANK" rel="noreferrer">
+      <button
+        className={checkButtonSize(size)}
+        style={{ color, backgroundColor: bgColor }}
+      >
+        {icon && (
+          <div className="me-2">
+            <Image width={iconSize} src={WhatsAppIcon} />
+          </div>
+        )}
+        <p style={{ fontSize: `${textSize}rem` }} className={styles.buttonText}>
+          {text}
+        </p>
+      </button>
+    </a>
   );
 };
 
