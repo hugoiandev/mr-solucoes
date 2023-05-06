@@ -7,6 +7,9 @@
   padding: 30px 70px;
   flex-wrap: nowrap;
   position: relative;
+  background-color: white;
+  position: fixed;
+  top: 0;
 }
 
 /* .nav {
@@ -51,11 +54,6 @@
 
 .navLinks li:last-child {
   margin-left: 200px;
-}
-
-.header .fixedHeader {
-  position: fixed;
-  top: 0;
 }
 
 .burger {

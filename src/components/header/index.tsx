@@ -17,7 +17,7 @@ const Header = (): JSX.Element => {
   };
 
   return (
-    <header className={styles.header}>
+    <header className={`${styles.header}`}>
       <div className={styles.logoBox}>
         <Image src={Logo} className={styles.navLogo} />
       </div>

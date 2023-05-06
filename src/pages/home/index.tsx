@@ -173,7 +173,7 @@ const Home = (): JSX.Element => {
       </section>
       <section className={styles.requirements}>
         <Container fluid="md">
-          <div className="d-flex justify-content-end">
+          <div className={styles.requirementsBox}>
             <div>
               <h2 className={styles.requirementsTitle}>
                 Como obter
@@ -183,7 +183,7 @@ const Home = (): JSX.Element => {
                 </span>
               </h2>
               <div className="mt-5 d-flex flex-column align-items-center">
-                <div>
+                <div className="ps-3">
                   <Row className={styles.requirementRow}>
                     <Col className={styles.requirementItem}>
                       <span className={styles.requirementNumber}>1</span>
@@ -424,7 +424,7 @@ const Home = (): JSX.Element => {
       </section>
       <section className={styles.testimonials}>
         <Container fluid="md">
-          <div className="d-flex justify-content-center mb-5">
+          <div className="d-flex justify-content-center mb-3">
             <h2 className={styles.testimonialsTitle}>
               Veja quem já confiou na{" "}
               <span className={styles.testimonialsTitleSpan}>
@@ -554,7 +554,7 @@ const Home = (): JSX.Element => {
                   </div>
                 </div>
               </Col>
-              <Col md={6}>
+              <Col md={6} className={styles.socialMediaBox}>
                 <div>
                   <div className="mb-3">
                     <span className={styles.contactTitle}>
@@ -562,10 +562,10 @@ const Home = (): JSX.Element => {
                     </span>
                   </div>
                   <div className="d-flex gap-3">
-                    <div className={styles.socialMediaBox}>
+                    <div className={styles.socialMediaIconBox}>
                       <Image width={25} src={FacebookIcon} />
                     </div>
-                    <div className={styles.socialMediaBox}>
+                    <div className={styles.socialMediaIconBox}>
                       <Image width={25} src={InstagramIcon} />
                     </div>
                   </div>
@@ -602,10 +602,10 @@ const Home = (): JSX.Element => {
                 sujeitas a alterações, sem aviso prévio.
               </p>
               <p className={styles.termsAdvertimentText}>
-                Atenção: A GH Promotora é uma plataforma digital que atua como
-                correspondente bancário para facilitar o processo de contratação
-                de empréstimos. NÃO exigimos depósitos ou cobramos taxas
-                antecipadas na realização de qualquer operação.
+                Atenção: A MR SOLUÇÕES FINANCEIRAS é uma plataforma digital que
+                atua como correspondente bancário para facilitar o processo de
+                contratação de empréstimos. NÃO exigimos depósitos ou cobramos
+                taxas antecipadas na realização de qualquer operação.
               </p>
             </div>
           </div>
