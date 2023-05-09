@@ -12,7 +12,7 @@ const Footer = () => {
       </div>
       <div>
         <span className={styles.footerCopy}>
-          {`© ${date.getFullYear()}  - Todos os direitos reservados | MR Soluções Financeiras`}
+          © 2023 - Todos os direitos reservados | MR Soluções Financeiras
         </span>
       </div>
     </footer>

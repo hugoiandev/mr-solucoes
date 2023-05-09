@@ -16,7 +16,6 @@ import SchoolIcon from "../../assets/icons/school.svg";
 import HeartIcon from "../../assets/icons/heart.svg";
 import ExclamationIcon from "../../assets/icons/exclamation.svg";
 import QuoteIcon from "../../assets/icons/quote.svg";
-import bgMan from "../../assets/imgs/bg-man.png";
 import bgMan2 from "../../assets/imgs/bg-last.png";
 import bgMoney from "../../assets/imgs/bg-money-2.png";
 import CallIcon from "../../assets/icons/call.svg";
