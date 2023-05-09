@@ -389,7 +389,7 @@
 }
 
 .faq {
-  background-color: #1B76AC;
+  background-color: var(--primary-color);
   padding: 60px 0;
 }
 
