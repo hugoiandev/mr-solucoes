@@ -3,7 +3,8 @@
   height: 600px;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url('../../assets/imgs/img-woman.jpg');
+  background-position: bottom;
+  background-image: url('../../assets/imgs/bg-woman-3.jpg');
 }
 
 .titleBox {
@@ -105,7 +106,7 @@
   font-family: 'Montserrat', sans-serif;
   font-size: 1.2rem;
   letter-spacing: 1px;
-  background-color: #F49D2C;
+  background-color: var(--primary-color);
   color: white;
   font-weight: bold;
   white-space: nowrap;
@@ -265,6 +266,7 @@
   font-size: 1.3rem;
   font-weight: bold;
   margin-top: 8px;
+  color: var(--primary-color);
 }
 
 .advantageIconParagraph {
@@ -277,7 +279,7 @@
 .requirements {
   padding: 60px 0;
   background-color: #F9F9F9;
-  background-image: url('../../assets/imgs//bg-woman2.jpeg');
+  background-image: url('../../assets/imgs//bg-woman-5.jpg');
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -321,7 +323,7 @@
   font-family: 'Montserrat', sans-serif;
   font-weight: 900;
   font-size: 4.5rem;
-  color: #1B76AC;
+  color: var(--primary-color);
   margin-right: 20px;
 }
 
@@ -369,7 +371,7 @@
 .benefictsIconBox {
   width: 40px;
   margin-right: 15px;
-  background-color: #F49D2C;
+  background-color: var(--primary-color);
   border-radius: 5px;
   padding: 5px;
 }
@@ -453,7 +455,7 @@
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
   font-size: 1.2rem;
-  color: #237BAF;
+  color: var(--primary-color);
 }
 
 .carouselRate {
@@ -474,7 +476,7 @@
   font-family: 'Montserrat', sans-serif;
   font-style: italic;
   font-size: 1.2rem;
-  color: #237BAF;
+  color: var(--primary-color);
 }
 
 .carouselCustomClass {
@@ -529,6 +531,7 @@
 
 .lastAd {
   align-items: center;
+  margin-top: 60px;
 }
 
 @media (max-width: 768px) {
@@ -575,4 +578,13 @@
   font-family: 'Montserrat', sans-serif;
   font-size: 1.1rem;
   font-weight: 500;
+}
+
+.whatsappIcon {
+  position: fixed;
+  z-index: 99999999;
+  bottom: 40px;
+  right: 30px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 7px 1px rgba(0,0,0,0.45);
 }

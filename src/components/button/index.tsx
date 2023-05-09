@@ -17,7 +17,7 @@ const Button = ({
   text,
   icon = true,
   color = "white",
-  bgColor = "#F49D2C",
+  bgColor = "#004AAD",
   size = "large",
   iconSize = 30,
   textSize = 1,

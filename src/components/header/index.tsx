@@ -3,7 +3,7 @@ import styles from "./header.module.css";
 import Logo from "../../assets/logos/mr-logo-black.svg";
 import Button from "../button";
 import { useMediaQuery } from "react-responsive";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import CloseIcon from "../../assets/icons/close.svg";
 import OpenIcon from "../../assets/icons/burger.svg";
 
@@ -15,18 +15,42 @@ const Header = (): JSX.Element => {
 
   const isMobile = useMediaQuery({ query: "(max-width: 1319px)" });
 
-  window.addEventListener("scroll", () => {
-    if (headerElement.current?.clientHeight) {
-      if (window.scrollY > headerElement.current?.clientHeight) {
-        setFixed(true);
-      } else {
-        setFixed(false);
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (headerElement.current?.clientHeight) {
+        if (window.scrollY > headerElement.current?.clientHeight) {
+          setFixed(true);
+        } else {
+          setFixed(false);
+        }
       }
-    }
-  });
+    });
+
+    const links = document.querySelectorAll('[href^="#"]');
+
+    links.forEach((item) => {
+      item.addEventListener("click", (event) => {
+        event.preventDefault();
+
+        const id = item.getAttribute("href");
+
+        const section = document.querySelector(id as string) as HTMLElement;
+
+        const sectionTop = section?.offsetTop;
+
+        const headerHeight = headerElement.current?.offsetHeight as number;
+
+        window.scrollTo({ top: sectionTop - headerHeight, behavior: "smooth" });
+      });
+    });
+  }, []);
 
   const onOpen = () => {
     setOpen((state) => !state);
+  };
+
+  const closeMenu = () => {
+    setOpen(false);
   };
 
   return (
@@ -35,7 +59,9 @@ const Header = (): JSX.Element => {
       className={`${styles.header} ${fixed ? styles.fixedHeader : ""}`}
     >
       <div className={styles.logoBox}>
-        <Image src={Logo} className={styles.navLogo} />
+        <a href="/">
+          <Image src={Logo} className={styles.navLogo} />
+        </a>
       </div>
       {isMobile ? (
         <div>
@@ -75,13 +101,19 @@ const Header = (): JSX.Element => {
           <div>
             <ul className={styles.navMobileLinks}>
               <li>
-                <a href="#advantages">VANTAGENS</a>
+                <a onClick={closeMenu} href="#advantages">
+                  VANTAGENS
+                </a>
               </li>
               <li>
-                <a href="#requirements">COMO OBTER</a>
+                <a onClick={closeMenu} href="#requirements">
+                  COMO OBTER
+                </a>
               </li>
               <li>
-                <a href="#faq">FAQ</a>
+                <a onClick={closeMenu} href="#faq">
+                  FAQ
+                </a>
               </li>
               <li>
                 <Button

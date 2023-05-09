@@ -17,12 +17,14 @@ import HeartIcon from "../../assets/icons/heart.svg";
 import ExclamationIcon from "../../assets/icons/exclamation.svg";
 import QuoteIcon from "../../assets/icons/quote.svg";
 import bgMan from "../../assets/imgs/bg-man.png";
-import bgMan2 from "../../assets/imgs/bg-man2.png";
+import bgMan2 from "../../assets/imgs/bg-last.png";
+import bgMoney from "../../assets/imgs/bg-money-2.png";
 import CallIcon from "../../assets/icons/call.svg";
 import MailIcon from "../../assets/icons/mail.svg";
 import ScheduleIcon from "../../assets/icons/schedule.svg";
 import FacebookIcon from "../../assets/icons/facebook.svg";
 import InstagramIcon from "../../assets/icons/instagram.svg";
+import WhatsappFixedIcon from "../../assets/icons/whatsapp-fixed.svg";
 import Button from "../../components/button";
 import Star from "../../components/star";
 import "swiper/css";
@@ -262,7 +264,7 @@ const Home = (): JSX.Element => {
             <Col md={6} sm={12}>
               <div className="d-flex justify-content-center">
                 <div className={styles.bgManBox}>
-                  <Image src={bgMan} className="w-100" />
+                  <Image src={bgMoney} className="w-100" />
                 </div>
               </div>
             </Col>
@@ -301,7 +303,7 @@ const Home = (): JSX.Element => {
                     <Image src={SchoolIcon} className="w-100" />
                   </div>
                   <span className={styles.benefictsList}>
-                    <span className="fw-bold">Invista nos estudos</span>de
+                    <span className="fw-bold">Invista nos estudos </span>de
                     alguém da sua família
                   </span>
                 </div>
@@ -475,12 +477,14 @@ const Home = (): JSX.Element => {
                 </div>
                 <div>
                   <p className={styles.carouselParagraph}>
-                    “Empresa muito séria e comprometida, atendimento ágil e
-                    excelente! Recomendo muito.”
+                    “Estou muito satisfeito com a MR Soluções Financeiras por me
+                    ajudarem a utilizar meu FGTS para obter um empréstimo. Eles
+                    guiaram todo o processo de forma clara e eficiente, tornando
+                    tudo muito fácil.”
                   </p>
-                  <span className={styles.carouselName}>Bruna Letícia</span>
+                  <span className={styles.carouselName}>Ana Pereira</span>
                   <div className={styles.carouselRate}>
-                    <span className={styles.carouselDate}>02/2022</span>
+                    <span className={styles.carouselDate}>01/2022</span>
                     <span>
                       <Star />
                     </span>
@@ -495,12 +499,14 @@ const Home = (): JSX.Element => {
                 </div>
                 <div>
                   <p className={styles.carouselParagraph}>
-                    “Empresa muito séria e comprometida, atendimento ágil e
-                    excelente! Recomendo muito.”
+                    “Agradeço à MR Soluções Financeiras por sua expertise em
+                    empréstimos com FGTS. Eles me auxiliaram a entender todas as
+                    possibilidades e escolher a melhor opção para minhas
+                    necessidades financeiras.”
                   </p>
-                  <span className={styles.carouselName}>Bruna Letícia</span>
+                  <span className={styles.carouselName}>Thiago Souza</span>
                   <div className={styles.carouselRate}>
-                    <span className={styles.carouselDate}>02/2022</span>
+                    <span className={styles.carouselDate}>03/2022</span>
                     <span>
                       <Star />
                     </span>
@@ -515,15 +521,15 @@ const Home = (): JSX.Element => {
                 </div>
                 <div>
                   <p className={styles.carouselParagraph}>
-                    “Empresa muito séria e comprometida, atendimento ágil e
-                    excelente! Recomendo muito.”
+                    “A MR Soluções Financeiras foi fundamental para eu utilizar
+                    meu FGTS como garantia em um empréstimo. Eles cuidaram de
+                    todos os trâmites burocráticos e me proporcionaram um
+                    processo tranquilo e rápido.”
                   </p>
-                  <span className={styles.carouselName}>Bruna Letícia</span>
+                  <span className={styles.carouselName}>Amanda Oliveira</span>
                   <div className={styles.carouselRate}>
-                    <span className={styles.carouselDate}>02/2022</span>
-                    <span>
-                      <Star />
-                    </span>
+                    <span className={styles.carouselDate}>04/2022</span>
+                    <Star />
                   </div>
                 </div>
               </div>
@@ -535,12 +541,134 @@ const Home = (): JSX.Element => {
                 </div>
                 <div>
                   <p className={styles.carouselParagraph}>
-                    “Empresa muito séria e comprometida, atendimento ágil e
-                    excelente! Recomendo muito.”
+                    “Estou extremamente satisfeito com a MR Soluções Financeiras
+                    pela forma como eles lidaram com meu empréstimo utilizando o
+                    FGTS. Eles foram muito eficientes em maximizar os benefícios
+                    dessa modalidade.”
                   </p>
-                  <span className={styles.carouselName}>Bruna Letícia</span>
+                  <span className={styles.carouselName}>Lucas Mendes</span>
                   <div className={styles.carouselRate}>
-                    <span className={styles.carouselDate}>02/2022</span>
+                    <span className={styles.carouselDate}>07/2022</span>
+                    <Star />
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.carouselItem}>
+                <div>
+                  <Image width={100} src={QuoteIcon} />
+                </div>
+                <div>
+                  <p className={styles.carouselParagraph}>
+                    “Gostaria de agradecer à MR Soluções Financeiras por me
+                    ajudarem a obter um empréstimo utilizando o meu FGTS. Eles
+                    foram extremamente atenciosos e explicaram todo o processo
+                    de forma clara e detalhada.”
+                  </p>
+                  <span className={styles.carouselName}>Fernanda Almeida</span>
+                  <div className={styles.carouselRate}>
+                    <span className={styles.carouselDate}>09/2022</span>
+                    <Star />
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.carouselItem}>
+                <div>
+                  <Image width={100} src={QuoteIcon} />
+                </div>
+                <div>
+                  <p className={styles.carouselParagraph}>
+                    “A MR Soluções Financeiras tornou o processo de obtenção de
+                    um empréstimo com FGTS muito simples. Eles ofereceram um
+                    suporte excepcional durante todo o processo, desde a
+                    solicitação até a liberação dos fundos.”
+                  </p>
+                  <span className={styles.carouselName}>Gustavo Rodrigues</span>
+                  <div className={styles.carouselRate}>
+                    <span className={styles.carouselDate}>11/2022</span>
+                    <Star />
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.carouselItem}>
+                <div>
+                  <Image width={100} src={QuoteIcon} />
+                </div>
+                <div>
+                  <p className={styles.carouselParagraph}>
+                    “Estou muito feliz com a MR Soluções Financeiras por me
+                    ajudarem a utilizar meu FGTS para quitar um empréstimo. Eles
+                    ofereceram uma solução conveniente e acessível, aliviando
+                    minha carga financeira.”
+                  </p>
+                  <span className={styles.carouselName}>Camila Santos</span>
+                  <div className={styles.carouselRate}>
+                    <span className={styles.carouselDate}>01/2023</span>
+                    <Star />
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.carouselItem}>
+                <div>
+                  <Image width={100} src={QuoteIcon} />
+                </div>
+                <div>
+                  <p className={styles.carouselParagraph}>
+                    “A MR Soluções Financeiras foi incrível ao me orientar sobre
+                    como utilizar meu FGTS para obter um empréstimo. Eles se
+                    preocuparam em encontrar a melhor solução para minha
+                    situação financeira.”
+                  </p>
+                  <span className={styles.carouselName}>João Oliveira</span>
+                  <div className={styles.carouselRate}>
+                    <span className={styles.carouselDate}>03/2023</span>
+                    <Star />
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.carouselItem}>
+                <div>
+                  <Image width={100} src={QuoteIcon} />
+                </div>
+                <div>
+                  <p className={styles.carouselParagraph}>
+                    “Recomendo fortemente a MR Soluções Financeiras para quem
+                    deseja obter um empréstimo com FGTS. Sua equipe experiente e
+                    comprometida me ajudou a encontrar as melhores condições e
+                    maximizar meu benefício.”
+                  </p>
+                  <span className={styles.carouselName}>Maria Silva</span>
+                  <div className={styles.carouselRate}>
+                    <span className={styles.carouselDate}>05/2023</span>
+                    <Star />
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.carouselItem}>
+                <div>
+                  <Image width={100} src={QuoteIcon} />
+                </div>
+                <div>
+                  <p className={styles.carouselParagraph}>
+                    “Agradeço à MR Soluções Financeiras por tornar possível o
+                    uso do meu FGTS como garantia em um empréstimo. Eles
+                    ofereceram um serviço profissional e ágil, facilitando todo
+                    o processo para mim.”
+                  </p>
+                  <span className={styles.carouselName}>Guilherme Santos</span>
+                  <div className={styles.carouselRate}>
+                    <span className={styles.carouselDate}>06/2023</span>
                     <Star />
                   </div>
                 </div>
@@ -563,7 +691,7 @@ const Home = (): JSX.Element => {
                   <div className="d-flex align-items-center mb-3">
                     <Image width={30} src={CallIcon} className="me-3" />
                     <span className={styles.contactSpan}>
-                      Ligue: <a href="tel: (19) 98276-6681">(19) 98607-3582</a>
+                      Ligue: <a href="tel: (19) 98276-6681">(19) 98276-6681</a>
                     </span>
                   </div>
                   <div className="d-flex align-items-center mb-3">
@@ -679,6 +807,15 @@ const Home = (): JSX.Element => {
         </Container>
       </section>
       <Footer />
+      <a
+        target="_blank"
+        href="https://api.whatsapp.com/send?phone=5519982766681&text=Ol%C3%A1%20gostaria%20de%20fazer%20uma%20simula%C3%A7%C3%A3o%20do%20Saque%20FGTS!"
+        rel="noreferrer"
+      >
+        <div className={styles.whatsappIcon}>
+          <Image width={60} src={WhatsappFixedIcon} />
+        </div>
+      </a>
     </>
   );
 };

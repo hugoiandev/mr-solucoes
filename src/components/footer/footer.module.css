@@ -4,7 +4,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 30px 70px;
-  background-color: #237BAF;
+  background-color: var(--primary-color);
 }
 
 .logoBox {
