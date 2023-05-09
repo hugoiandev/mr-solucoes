@@ -1,6 +1,3 @@
-:root {
-  --primary-color: #004AAD;
-}
 
 .header {
   width: 100%;
@@ -30,14 +27,6 @@
     opacity: 1;
   }
 }
-
-/* .nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 30px 70px;
-  flex-wrap: wrap;
-} */
 
 .logoBox {
   max-width: 250px;
@@ -73,6 +62,24 @@
 
 .navLinks li:last-child {
   margin-left: 200px;
+}
+
+.navLinks li a:hover {
+  color: var(--primary-color);
+}
+
+.navLinks li:not(:last-child) a::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: var(--primary-color);
+  transition: .5s;
+  transform: scaleX(0);
+}
+
+.navLinks li:not(:last-child) a:hover::after {
+  transform: scaleX(1);
 }
 
 .burger {

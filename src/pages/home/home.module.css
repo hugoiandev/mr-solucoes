@@ -532,6 +532,7 @@
 .lastAd {
   align-items: center;
   margin-top: 60px;
+  gap: 50px;
 }
 
 @media (max-width: 768px) {
