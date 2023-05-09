@@ -34,7 +34,7 @@ import { useMediaQuery } from "react-responsive";
 import { useState } from "react";
 
 const Home = (): JSX.Element => {
-  const [simulationInput, setSimulationInput] = useState<string>("2000");
+  const [simulationInput, setSimulationInput] = useState<string>("");
 
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
 
